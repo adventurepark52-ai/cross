@@ -1,0 +1,31 @@
+# One college per line. Lines starting with # are ignored.
+# Format: Official Name (Alias1, Alias2)
+# Aliases are former names / abbreviations alumni actually type in their
+# LinkedIn Education section — they make Step 0 faster and more accurate.
+# Example: NSUT (NSIT, Netaji Subhas University of Technology)
+# Note: VIT Vellore and VIT Pune are DIFFERENT institutions. Each IIT is separate.
+#
+# >>> PUT YOUR COLLEGES BELOW THIS LINE <<<
+DTU (DTU, DCE, Delhi Technological University, Delhi College of Engineering)
+# LinkedIn splits DTU across THREE school entities - combine all three in one schoolFilter:
+#   31053886 = Delhi Technological University (Formerly DCE)
+#   15249404 = Delhi Technological University
+#   680890   = Delhi College of Engineering
+# Decoy: school/shri-maharshi-dayanand-saraswati-bed-college displays as "Delhi Technological University (DTU)" but is a B.Ed college.
+# DTU != NSUT (NSIT). Each is a separate institution.
+IIIT Delhi (IIIT-D, IIITD, Indraprastha Institute of Information Technology, Delhi)
+# LinkedIn school entity ID observed 2026-10-09: 362624 (linkedin.com/school/iiit-delhi)
+# NOT the same institution: IIIT Hyderabad, IIIT Bangalore, other state IIITs, IIIT One (online platform)
+NSUT (NSIT, Netaji Subhas University of Technology, Netaji Subhas Institute of Technology, Delhi Institute of Technology, DIT)
+# LinkedIn splits NSUT across THREE school entities - combine all three in one schoolFilter (observed 2026-10-10):
+#   394452 = Netaji Subhas Institute of Technology (school/nsut, 21K alumni - MAIN)
+#   76208394 = Netaji Subhas University of Technology (6K alumni)
+#   15129403 = Netaji Subhas University of Technology (NSUT) Delhi (netaji-subhash-engineering-college-292, 5K alumni)
+# NSUT != DTU (DCE). Each is a separate institution.
+IIT Jammu (IITJMU, Indian Institute of Technology Jammu)
+# LinkedIn school entity ID observed 2026-10-10: 28749484 (linkedin.com/school/iitjammu, 3K alumni, founded 2016 - single entity, no split found)
+# NOT the same institution: every other IIT (Delhi, Bombay, Kanpur...), IIITs. Each IIT is separate.
+IIT Ropar (IITRPR, Indian Institute of Technology Ropar)
+# LinkedIn school entity ID observed 2026-10-10: 15138979 (linkedin.com/school/iitropar, 9K alumni, founded 2008 - single entity)
+# Sub-units (NOT employers): school/saideiitropar, school/mechanical-engineering-iit-ropar, company/cds-iit-jammu-pattern CDC, company/iit-ropar-punjab (Libraries decoy)
+# NOT the same institution: every other IIT, IIITs, JKLU (JK Lakshmipat - different university, one card hit filtered out).
